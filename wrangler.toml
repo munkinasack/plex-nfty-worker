@@ -1,0 +1,27 @@
+name = "plex-ntfy-worker"
+main = "src/index.ts"
+compatibility_date = "2025-08-20"
+workers_dev = true
+
+
+# Provisioned automatically by the Deploy flow; IDs will be filled in.
+kv_namespaces = [
+{ binding = "THUMBS" }
+]
+
+
+[vars]
+# These are configured as Worker *secrets* post-deploy; values here are just docs.
+# Run `wrangler secret put ALLOWED_USER` etc., or set them in the Dashboard.
+# ALLOWED_USER = ""
+# NTFY_BASE = "https://ntfy.sh"
+# NTFY_TOPIC = "mytopic"
+
+
+# Bind a Secrets Store secret for the ntfy token (pick your actual store & secret name in the deploy UI)
+[[secrets_store_secrets]]
+# Binding name available in code as env.NTFY_TOKEN_S (call .get() to retrieve)
+binding = "NTFY_TOKEN_S"
+# These placeholders will be replaced in the deploy UI
+store_id = "demo"
+secret_name = "ntfy-token"
