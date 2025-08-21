@@ -1,0 +1,22 @@
+{
+"name": "plex-ntfy-worker",
+"private": true,
+"type": "module",
+"scripts": {
+"dev": "wrangler dev",
+"deploy": "wrangler deploy"
+},
+"devDependencies": {
+"wrangler": "^3.95.0",
+"typescript": "^5.6.2",
+"@cloudflare/workers-types": "^4.2025.8.1"
+},
+"cloudflare": {
+"bindings": {
+"ALLOWED_USER": { "description": "Only notify for this Plex user (Account.title). Leave empty to allow all." },
+"NTFY_BASE": { "description": "Your ntfy base URL, e.g. https://ntfy.sh or https://ntfy.example.com" },
+"NTFY_TOPIC": { "description": "ntfy topic name (no slashes)" },
+"NTFY_TOKEN_S": { "description": "Secrets Store: Select the ntfy access token (Authorization: Bearer ...)" }
+}
+}
+}
