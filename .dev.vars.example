@@ -1,0 +1,6 @@
+# For local dev only (not used in production automatically)
+ALLOWED_USER=
+NTFY_BASE=https://ntfy.sh
+NTFY_TOPIC=demo
+# Optional fallback if you prefer classic Worker secrets instead of Secrets Store
+NTFY_TOKEN=
