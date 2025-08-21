@@ -4,7 +4,7 @@ A tiny Cloudflare Worker that receives Plex webhooks, filters by **one Plex user
 
 > Deploy it with the button below after you’ve pushed this repository to GitHub/GitLab (public). The Deploy flow will provision KV & bindings for you.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=<YOUR_PUBLIC_REPO_URL>)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/munkinasack/plex-nfty-worker)
 
 ---
 
